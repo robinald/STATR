@@ -1,3 +1,6 @@
+#This short R script installs R packages required for DESeq2 analysis.
+#Packages: DESeq2, RColorBrewer, gplots, getopt, optparse, data.table
+
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("DESeq2")
