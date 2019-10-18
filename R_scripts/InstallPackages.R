@@ -1,4 +1,5 @@
 #This short R script installs R packages required for DESeq2 analysis.
+#This script works for R version 3.6 or higher.
 #Packages: DESeq2, RColorBrewer, gplots, getopt, optparse, data.table
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
