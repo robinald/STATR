@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 10 22:42:56 2019
-
-@author: Donghui Choe
-"""
-
 import sys, getopt
 sys.argv
 
@@ -14,30 +7,30 @@ def get_argv(argv):
     try:
         options, args = getopt.getopt(argv, 'hi:o:')
     except getopt.GetoptError:
-        print ('Error while reading argument. Call Parse_genome_annotation.py -h')
+        print ('Error while reading argument. Call ParseGenomeAnnotation.py -h')
         sys.exit(2)
     if len(options) == 0:
-        print ('Error while reading argument. Call Parse_genome_annotation.py -h')
+        print ('Error while reading argument. Call ParseGenomeAnnotation.py -h')
         sys.exit(2)
     for option, arg in options:
         if len(options) == 1:
             if option == '-h':
-                print ('Parse_genome_annotation.py sweeps unnecessarily long attribute section of GFF3 file downloaded from NCBI.')
+                print ('ParseGenomeAnnotation.py sweeps unnecessarily long attribute section of GFF3 file downloaded from NCBI.')
                 print ('Usage: Parse_genome_annotation.py -i <input_file> -o <output_file>')
                 sys.exit()
             else:
-                print ('Error while reading argument. Call Parse_genome_annotation.py -h')
+                print ('Error while reading argument. Call ParseGenomeAnnotation.py -h')
                 sys.exit(2)
         elif len(options) == 2:
             if option == '-i':
                 if arg == '':
-                    print ('Error while reading argument. Call Parse_genome_annotation.py -h')
+                    print ('Error while reading argument. Call ParseGenomeAnnotation.py -h')
                     sys.exit(2)
                 input_file = arg
                 print('Input GFF3: '+input_file)
             elif option == '-o':
                 if arg == '':
-                    print ('Error while reading argument. Call Parse_genome_annotation.py -h')
+                    print ('Error while reading argument. Call ParseGenomeAnnotation.py -h')
                     sys.exit(2)
                 output_file = arg
                 print('Output GFF3: '+output_file)
